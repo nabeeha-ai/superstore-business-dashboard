@@ -23,7 +23,7 @@ def load_data():
 
 df = load_data()
 
-st.title("📊 Global Superstore — Business Performance Dashboard")
+st.title("Global Superstore — Business Performance Dashboard")
 st.caption("Filter by Region, Category, and Sub-Category to explore Sales & Profit KPIs.")
 
 # ---------------- Sidebar filters ----------------
@@ -94,7 +94,7 @@ ax.set_ylabel("Sales ($)")
 plt.xticks(rotation=60)
 st.pyplot(fig)
 
-st.subheader("🏆 Top 5 Customers by Sales")
+st.subheader("Top 5 Customers by Sales")
 top5 = filtered.groupby("Customer Name")["Sales"].sum().sort_values(ascending=False).head(5)
 c1, c2 = st.columns([1, 1])
 with c1:
